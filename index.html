@@ -423,8 +423,8 @@
             <a href="mailto:chestertonredcow@gmail.com" class="link">chestertonredcow@gmail.com</a>
           </p>
           <div class="visit__socials">
-            <a href="#" aria-label="Instagram" class="visit__social">Instagram</a>
-            <a href="#" aria-label="Facebook" class="visit__social">Facebook</a>
+            <a href="#social" aria-label="Instagram" class="visit__social visit__social--soon">Instagram</a>
+            <a href="https://www.facebook.com/people/The-RED-COW/61564161263680/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="visit__social">Facebook</a>
           </div>
         </div>
       </div>
@@ -463,6 +463,49 @@
     </div>
   </section>
 
+  <!-- ================== SOCIAL FEED ================== -->
+  <section class="social" id="social">
+    <div class="social__head">
+      <p class="eyebrow" data-reveal>Stay Connected</p>
+      <h2 class="h2" data-reveal>Latest from the pub.</h2>
+      <p class="social__intro" data-reveal>
+        Follow us for food, events and what's on. Posts here update automatically when we share on social.
+      </p>
+    </div>
+    <div class="social__grid">
+      <div class="social__panel social__panel--fb" data-reveal>
+        <div class="social__panel-head">
+          <h3>Facebook</h3>
+          <a href="https://www.facebook.com/people/The-RED-COW/61564161263680/" target="_blank" rel="noopener noreferrer" class="social__follow">Follow →</a>
+        </div>
+        <div class="social__embed">
+          <div
+            class="fb-page"
+            data-href="https://www.facebook.com/people/The-RED-COW/61564161263680/"
+            data-tabs="timeline"
+            data-width="500"
+            data-height="420"
+            data-small-header="true"
+            data-adapt-container-width="true"
+            data-hide-cover="false"
+            data-show-facepile="false"></div>
+        </div>
+      </div>
+      <div class="social__panel social__panel--ig" data-reveal>
+        <div class="social__panel-head">
+          <h3>Instagram</h3>
+          <a href="#" id="instagramFollow" class="social__follow social__follow--soon" hidden>Follow →</a>
+        </div>
+        <div class="social__embed" id="instagramEmbed">
+          <div class="social__placeholder">
+            <p class="social__placeholder-title">Launching soon</p>
+            <p class="social__placeholder-text">We're setting up Instagram this week. Check back for our latest photos and updates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ================== FOOTER ================== -->
   <footer class="foot">
     <div class="foot__top">
@@ -488,8 +531,8 @@
         <div>
           <p class="foot__h">Follow</p>
           <p>
-            <a href="#">Instagram</a><br/>
-            <a href="#">Facebook</a>
+            <a href="#social">Instagram</a><br/>
+            <a href="https://www.facebook.com/people/The-RED-COW/61564161263680/" target="_blank" rel="noopener noreferrer">Facebook</a>
           </p>
         </div>
       </div>
@@ -500,6 +543,8 @@
     </div>
   </footer>
 
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v21.0"></script>
   <script src="script.js"></script>
 </body>
 </html>

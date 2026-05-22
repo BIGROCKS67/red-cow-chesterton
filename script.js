@@ -3,6 +3,54 @@
 (function () {
   'use strict';
 
+/* --- social config (update Instagram when live) --- */
+  const SOCIAL = {
+    facebook: 'https://www.facebook.com/people/The-RED-COW/61564161263680/',
+    instagramHandle: '',
+    // Paste SnapWidget or Behold embed URL here once Instagram is live
+    instagramEmbedSrc: '',
+  };
+
+  if (SOCIAL.instagramHandle || SOCIAL.instagramEmbedSrc) {
+    const follow = document.getElementById('instagramFollow');
+    const embed = document.getElementById('instagramEmbed');
+    const url = SOCIAL.instagramHandle
+      ? `https://www.instagram.com/${SOCIAL.instagramHandle}/`
+      : 'https://www.instagram.com/';
+
+    if (follow && SOCIAL.instagramHandle) {
+      follow.href = url;
+      follow.hidden = false;
+    }
+
+    if (embed && SOCIAL.instagramEmbedSrc) {
+      embed.innerHTML = `
+        <iframe
+          src="${SOCIAL.instagramEmbedSrc}"
+          class="social__snapwidget"
+          title="The Red Cow on Instagram"
+          loading="lazy"
+          allowtransparency="true"
+          frameborder="0"
+          scrolling="no"></iframe>`;
+    } else if (embed && SOCIAL.instagramHandle) {
+      embed.querySelector('.social__placeholder-text').textContent =
+        'Our Instagram feed is being connected. Follow us for the latest photos and updates.';
+      if (follow) follow.classList.remove('social__follow--soon');
+    }
+
+    if (SOCIAL.instagramHandle) {
+      document.querySelectorAll('.visit__social--soon').forEach(el => {
+        el.href = url;
+        el.classList.remove('visit__social--soon');
+        el.target = '_blank';
+        el.rel = 'noopener noreferrer';
+        el.style.pointerEvents = '';
+        el.style.opacity = '';
+      });
+    }
+  }
+
   /* --- year stamp --- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
