@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1f2d1d" />
+  <title>The Red Cow · Traditional British Village Pub, Chesterton</title>
+  <meta name="description" content="A centuries-old village pub in Chesterton, Oxfordshire. Locally sourced British food, real ales and a warm welcome from Danni & Alister." />
+  <meta property="og:title" content="The Red Cow, Chesterton" />
+  <meta property="og:description" content="A centuries-old village pub in the heart of Chesterton. Real food, real ale, real welcome." />
+  <meta property="og:image" content="assets/img/pub-1.jpg" />
+  <meta property="og:type" content="restaurant" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "The Red Cow",
+    "description": "Traditional British village pub serving locally sourced food in Chesterton, Oxfordshire.",
+    "image": ["https://www.theredcowchesterton.co.uk/assets/img/pub-1.jpg"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "The Green",
+      "addressLocality": "Chesterton",
+      "addressRegion": "Oxfordshire",
+      "postalCode": "OX26 1UU",
+      "addressCountry": "GB"
+    },
+    "telephone": "+44-1869-932495",
+    "email": "chestertonredcow@gmail.com",
+    "servesCuisine": ["British", "Pub Food"],
+    "priceRange": "££",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "18:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "12:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "12:00", "closes": "22:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "12:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "12:00", "closes": "23:00" },
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "22:00" }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ================== NAV ================== -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__brand" aria-label="The Red Cow, home">
+      <span class="nav__brand-mark">RC</span>
+      <span class="nav__brand-text">The Red Cow</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#bar">The Bar</a>
+      <a href="#visit">Visit</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="tel:+441869932495" class="nav__cta">
+      <span class="nav__cta-icon" aria-hidden="true">☎</span>
+      <span class="nav__cta-text">01869 932495</span>
+    </a>
+    <button class="nav__burger" id="navBurger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- ================== HERO ================== -->
+  <section class="hero" id="top">
+    <div class="hero__bg" aria-hidden="true">
+      <img src="assets/img/pub-1.jpg" alt="" />
+      <div class="hero__bg-grad"></div>
+    </div>
+    <div class="hero__inner">
+      <p class="hero__eyebrow" data-reveal>EST. CENTURIES AGO · CHESTERTON, OXFORDSHIRE</p>
+      <h1 class="hero__title" data-reveal>
+        <span class="hero__title-line">The</span>
+        <span class="hero__title-line hero__title-line--accent">Red Cow</span>
+      </h1>
+      <p class="hero__sub" data-reveal>A traditional British village pub.<br/>Real food. Real ale. A real welcome.</p>
+      <div class="hero__ctas" data-reveal>
+        <a href="#menu" class="btn btn--primary">View the Menu</a>
+        <a href="#visit" class="btn btn--ghost">Find Us</a>
+      </div>
+    </div>
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+    <div class="hero__marquee" aria-hidden="true">
+      <div class="hero__marquee-track">
+        <span>Locally Sourced</span><span>·</span>
+        <span>Sunday Roasts</span><span>·</span>
+        <span>Real Ales</span><span>·</span>
+        <span>Dog Friendly</span><span>·</span>
+        <span>Beer Garden</span><span>·</span>
+        <span>Open Fires</span><span>·</span>
+        <span>Locally Sourced</span><span>·</span>
+        <span>Sunday Roasts</span><span>·</span>
+        <span>Real Ales</span><span>·</span>
+        <span>Dog Friendly</span><span>·</span>
+        <span>Beer Garden</span><span>·</span>
+        <span>Open Fires</span><span>·</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== ABOUT / HISTORY ================== -->
+  <section class="about" id="about">
+    <div class="about__grid">
+      <div class="about__img" data-reveal>
+        <div class="about__img-frame">
+          <img src="assets/img/hero.jpg" alt="A vintage photograph of The Red Cow public house in Chesterton" />
+        </div>
+        <p class="about__caption">The Red Cow, c. early 1900s</p>
+      </div>
+      <div class="about__copy">
+        <p class="eyebrow" data-reveal>Our History · Our Future</p>
+        <h2 class="h2" data-reveal>Centuries old.<br/><em>Newly loved.</em></h2>
+        <p class="lede" data-reveal>
+          With over seven years in the village pub industry,
+          <strong>Danni &amp; Alister</strong> are excited to return to Chesterton
+          to help grow the centuries-old Red Cow.
+        </p>
+        <p data-reveal>
+          Working with local suppliers, we deliver fantastic traditional British
+          menus with great service and a superb atmosphere. Supporting the community
+          is our focus. Bringing the local village pub back as the local hub.
+        </p>
+        <div class="about__pillars" data-reveal>
+          <div class="pillar">
+            <div class="pillar__num">7+</div>
+            <div class="pillar__label">Years in the village pub trade</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__num">100%</div>
+            <div class="pillar__label">Locally sourced where we can</div>
+          </div>
+          <div class="pillar">
+            <div class="pillar__num">1<span class="pillar__sup">st</span></div>
+            <div class="pillar__label">For community spirit</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== MENU ================== -->
+  <section class="menu" id="menu">
+    <div class="menu__head">
+      <p class="eyebrow eyebrow--light" data-reveal>The Kitchen</p>
+      <h2 class="h2 h2--light" data-reveal>Honest food, properly cooked.</h2>
+      <p class="menu__intro" data-reveal>
+        Seasonal British plates from local suppliers. Allergens and dietary
+        options are noted throughout. Please ask a member of staff if anything
+        is unclear.
+      </p>
+
+      <div class="menu__tabs" role="tablist" data-reveal>
+        <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="dinner">Dinner</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="lunch">Lunch</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="sunday">Sunday Roast</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="kids">Children</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="dessert">Dessert &amp; Drinks</button>
+      </div>
+    </div>
+
+    <!-- DINNER -->
+    <div class="menu__panel is-active" data-panel="dinner">
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Starters</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Honey &amp; Mustard Chipolatas</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Mustard mayonnaise &amp; leaves <em>(gfo, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mushrooms on Toast</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Creamy garlic sauce on toasted sourdough <em>(v, gfo, vgo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Camembert <span class="menu__share">to share</span></span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Toasted sourdough &amp; onion chutney <em>(v, gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Buffalo Chicken Wings</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Spicy buffalo sauce, blue cheese dip &amp; leaves <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Smoked Salmon</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Coriander, pink grapefruit &amp; olive oil</p></li>
+          </ul>
+
+          <h3 class="menu__cat">Burgers <span class="menu__cat-note">all with skin-on fries</span></h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Classic Beef</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Beef patty, lettuce, tomato, cheddar &amp; tomato relish <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mushroom &amp; Halloumi</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Portobello, halloumi, lettuce, tomato &amp; chilli jam <em>(v, gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Spring Chicken</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, halloumi, avocado, lettuce, tomato &amp; mayo <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Furnace</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, mexicana cheese, lettuce, tomato, jalapeños &amp; chilli jam <em>(gfo, dfo)</em></p></li>
+          </ul>
+        </div>
+
+        <div class="menu__col">
+          <h3 class="menu__cat">Mains</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Fish &amp; Chips</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beer-battered cod, chunky chips, peas &amp; tartar sauce <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Rump Steak &amp; Tagliatelle</span><span class="menu__dot"></span><span class="menu__price">£17</span></div><p class="menu__desc">Mushrooms, spinach, fresh chillies &amp; garlic butter dressing</p></li>
+            <li><div class="menu__row"><span class="menu__name">8oz Ribeye</span><span class="menu__dot"></span><span class="menu__price">£24</span></div><p class="menu__desc">Chunky chips, peppercorn sauce, onion ring, fried tomato &amp; sautéed mushrooms <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken Supreme</span><span class="menu__dot"></span><span class="menu__price">£19</span></div><p class="menu__desc">Pan-roasted with dauphinoise, shiitake, sautéed peas, chantenay carrots &amp; chestnut chicken sauce <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Lamb Wraps</span><span class="menu__dot"></span><span class="menu__price">£18</span></div><p class="menu__desc">Grilled leg steak, pomegranate glaze, tzatziki, pomegranate, red onion, parsley &amp; tomato salad with soft tortillas <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Beetroot &amp; Fennel Salad</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Roasted beetroot, quinoa, fennel, avocado, walnuts, rocket, herbs &amp; lemon mustard dressing <em>(vg, gf)</em><br/><span class="menu__add">Add chicken £7 · halloumi £5</span></p></li>
+            <li><div class="menu__row"><span class="menu__name">Sea Bass &amp; Capers</span><span class="menu__dot"></span><span class="menu__price">£20</span></div><p class="menu__desc">Pan-fried fillets, sautéed baby potatoes, tenderstem broccoli &amp; lemon cream sauce</p></li>
+          </ul>
+
+          <h3 class="menu__cat">Sides <span class="menu__cat-note">all £4</span></h3>
+          <ul class="menu__sides">
+            <li>Chunky chips <em>(gf)</em></li>
+            <li>Side salad <em>(gf, vg)</em></li>
+            <li>Onion rings <em>(gf)</em></li>
+            <li>Mac 'n' cheese</li>
+            <li>Garlic flatbread <em>(v)</em></li>
+            <li>Skin-on fries <em>(gf)</em></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- LUNCH -->
+    <div class="menu__panel" data-panel="lunch">
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Paninis <span class="menu__cat-note">with fries &amp; side salad</span></h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Grilled Halloumi</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Roasted peppers, courgette &amp; harissa mayo <em>(gfo, vgo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chipolatas</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Caramelised onions <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Brie &amp; Bacon</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Cranberry sauce <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken</span><span class="menu__dot"></span><span class="menu__price">£10</span></div><p class="menu__desc">Grilled breast, lettuce, tomato &amp; basil pesto <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Fish</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Pan-fried pollack, pink grapefruit mayo &amp; lettuce <em>(gfo)</em></p></li>
+          </ul>
+
+          <h3 class="menu__cat">Open Sandwiches</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Smashed Avocado &amp; Prosciutto</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Fresh chillies, pumpkin seeds &amp; rocket on toasted sourdough <em>(gfo, vg-option)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Fried Egg, Watercress &amp; Gruyère</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Toasted sourdough <em>(gfo)</em></p></li>
+          </ul>
+        </div>
+        <div class="menu__col">
+          <h3 class="menu__cat">Lunch Mains</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Fish &amp; Chips</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beer-battered cod, chunky chips, peas &amp; tartar sauce <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Rump Steak &amp; Tagliatelle</span><span class="menu__dot"></span><span class="menu__price">£17</span></div><p class="menu__desc">Mushrooms, spinach, fresh chillies &amp; garlic butter dressing</p></li>
+            <li><div class="menu__row"><span class="menu__name">Lamb Wraps</span><span class="menu__dot"></span><span class="menu__price">£18</span></div><p class="menu__desc">Grilled leg steak, pomegranate glaze, tzatziki, pomegranate, red onion, parsley &amp; tomato salad <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Beetroot &amp; Fennel Salad</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Roasted beetroot, quinoa, fennel, avocado, walnuts, rocket &amp; lemon mustard dressing <em>(vg, gf)</em><br/><span class="menu__add">Add chicken £7 · halloumi £5</span></p></li>
+          </ul>
+
+          <h3 class="menu__cat">Burgers</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Classic Beef</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Beef patty, lettuce, tomato, cheddar &amp; tomato relish</p></li>
+            <li><div class="menu__row"><span class="menu__name">Mushroom &amp; Halloumi</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Portobello, halloumi, lettuce, tomato &amp; chilli jam</p></li>
+            <li><div class="menu__row"><span class="menu__name">Spring Chicken</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, halloumi, avocado, lettuce, tomato &amp; mayo</p></li>
+            <li><div class="menu__row"><span class="menu__name">Furnace</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, mexicana, lettuce, tomato, jalapeños &amp; chilli jam</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUNDAY -->
+    <div class="menu__panel" data-panel="sunday">
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Sunday Starters</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Honey &amp; Mustard Chipolatas</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Mustard mayonnaise &amp; leaves <em>(gfo, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mushrooms on Toast</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Creamy garlic sauce on toasted sourdough <em>(v, gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Camembert to share</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Toasted sourdough &amp; onion chutney</p></li>
+            <li><div class="menu__row"><span class="menu__name">Buffalo Chicken Wings</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Blue cheese dip &amp; leaves <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Soup of the Week</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Served with crusty bread, please ask staff <em>(vgo, gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mackerel</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Pan-fried with watercress, radish &amp; beetroot horseradish purée <em>(gf)</em></p></li>
+          </ul>
+        </div>
+        <div class="menu__col">
+          <h3 class="menu__cat">The Roasts <span class="menu__cat-note">with all the trimmings</span></h3>
+          <p class="menu__desc menu__desc--feature">
+            Roast potatoes, onion purée, kale, honey roasted carrots, parsnips,
+            sautéed green beans, Yorkshire pudding, brussels &amp; bacon, gravy <em>(gfo)</em>
+          </p>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Sirloin of Beef</span><span class="menu__dot"></span><span class="menu__price">£19</span></div></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken Supreme</span><span class="menu__dot"></span><span class="menu__price">£19</span></div></li>
+            <li><div class="menu__row"><span class="menu__name">Leg of Lamb</span><span class="menu__dot"></span><span class="menu__price">£17</span></div></li>
+            <li><div class="menu__row"><span class="menu__name">Nut Roast</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Vegetarian</p></li>
+          </ul>
+
+          <h3 class="menu__cat">Other Mains</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Fish &amp; Chips</span><span class="menu__dot"></span><span class="menu__price">£16</span></div></li>
+            <li><div class="menu__row"><span class="menu__name">Hake Supreme</span><span class="menu__dot"></span><span class="menu__price">£24</span></div><p class="menu__desc">Pan-fried with leeks, toasted almonds, asparagus, fondant potato &amp; lemon beurre blanc <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Beetroot &amp; Fennel Salad</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Add mackerel £7 · chicken £7 · halloumi £5</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- KIDS -->
+    <div class="menu__panel" data-panel="kids">
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Children's Mains <span class="menu__cat-note">up to 11yrs</span></h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Beef Burger</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Beef patty, melted cheddar, ketchup &amp; fries <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Fish &amp; Chips</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">With peas <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken Burger</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Melted cheddar, mayonnaise &amp; fries <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chipolatas</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">With beans &amp; chips <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mac &amp; Cheese</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">With garlic bread &amp; vegetable sticks</p></li>
+          </ul>
+        </div>
+        <div class="menu__col">
+          <h3 class="menu__cat">Children's Desserts</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Warm Chocolate Brownie</span><span class="menu__dot"></span><span class="menu__price">£5</span></div><p class="menu__desc">Chocolate sauce &amp; vanilla ice cream <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Sticky Toffee Pudding</span><span class="menu__dot"></span><span class="menu__price">£5</span></div><p class="menu__desc">Toffee sauce &amp; vanilla ice cream</p></li>
+            <li><div class="menu__row"><span class="menu__name">Apple Crumble</span><span class="menu__dot"></span><span class="menu__price">£5</span></div><p class="menu__desc">Walnut crumble &amp; vanilla ice cream</p></li>
+            <li><div class="menu__row"><span class="menu__name">Ice Creams</span><span class="menu__dot"></span><span class="menu__price">£2</span></div><p class="menu__desc">Chocolate, vanilla, honeycomb, strawberry, salted caramel &amp; mint choc chip</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESSERT & DRINKS -->
+    <div class="menu__panel" data-panel="dessert">
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Desserts</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Sticky Toffee Pudding</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Toffee sauce &amp; vanilla ice cream</p></li>
+            <li><div class="menu__row"><span class="menu__name">Warm Chocolate Brownie</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Chocolate sauce &amp; vanilla ice cream <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Apple Crumble</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Walnut crumble with vegan ice cream <em>(vg, gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Lemon Panna Cotta</span><span class="menu__dot"></span><span class="menu__price">£8</span></div><p class="menu__desc">Raspberry sauce &amp; macadamia nut shortbread <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Scoop of Ice Cream</span><span class="menu__dot"></span><span class="menu__price">£2</span></div><p class="menu__desc">Vanilla, mint choc chip, salted caramel, strawberry, honeycomb, chocolate</p></li>
+          </ul>
+        </div>
+        <div class="menu__col">
+          <h3 class="menu__cat">After Dinner Drinks</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Cafetière of Coffee</span><span class="menu__dot"></span><span class="menu__price">£3.50</span></div><p class="menu__desc">Regular or decaf</p></li>
+            <li><div class="menu__row"><span class="menu__name">Pot of Tea</span><span class="menu__dot"></span><span class="menu__price">£3.50</span></div><p class="menu__desc">English breakfast, Earl Grey, decaf, peppermint, green &amp; lemon &amp; ginger</p></li>
+            <li><div class="menu__row"><span class="menu__name">Feuerheerd's Port 2017 LBV</span><span class="menu__dot"></span><span class="menu__price">£4.50</span></div><p class="menu__desc">50ml</p></li>
+            <li><div class="menu__row"><span class="menu__name">Feuerheerd's Port 2003 Vintage</span><span class="menu__dot"></span><span class="menu__price">£8.20</span></div><p class="menu__desc">50ml</p></li>
+            <li><div class="menu__row"><span class="menu__name">Cotswolds Single Malt Whiskey</span><span class="menu__dot"></span><span class="menu__price">£6.20</span></div><p class="menu__desc">25ml</p></li>
+            <li><div class="menu__row"><span class="menu__name">Bulleit Bourbon</span><span class="menu__dot"></span><span class="menu__price">£5</span></div><p class="menu__desc">25ml</p></li>
+            <li><div class="menu__row"><span class="menu__name">Bailey's</span><span class="menu__dot"></span><span class="menu__price">£4.90</span></div><p class="menu__desc">50ml</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <p class="menu__legend">
+      <em>Please inform staff about any allergies.</em><br/>
+      gf = gluten free · v = vegetarian · vg = vegan · df = dairy free · o = option
+    </p>
+  </section>
+
+  <!-- ================== BAR / ATMOSPHERE ================== -->
+  <section class="bar" id="bar">
+    <div class="bar__media">
+      <img src="assets/img/pub-2.jpg" alt="The bar at The Red Cow with a row of polished beer taps" />
+    </div>
+    <div class="bar__copy">
+      <p class="eyebrow" data-reveal>The Bar</p>
+      <h2 class="h2" data-reveal>Pull up a stool.<br/><em>Stay a while.</em></h2>
+      <p data-reveal>
+        Six rotating taps. Real ales, lagers and ciders alongside a thoughtful
+        wine list and proper spirits. Whether it's a quick pint after work or
+        a long Sunday afternoon by the fire, the welcome's the same.
+      </p>
+      <ul class="bar__list" data-reveal>
+        <li><span>·</span>Local cask ales on rotation</li>
+        <li><span>·</span>Estrella Galicia &amp; Guinness on draught</li>
+        <li><span>·</span>Curated wine list by the glass</li>
+        <li><span>·</span>Cotswolds Single Malt &amp; small-batch spirits</li>
+        <li><span>·</span>Sun-trap beer garden &amp; dog-friendly bar</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================== VISIT / MAP ================== -->
+  <section class="visit" id="visit">
+    <div class="visit__head">
+      <p class="eyebrow" data-reveal>Visit Us</p>
+      <h2 class="h2" data-reveal>The Green, Chesterton.</h2>
+      <p class="visit__sub" data-reveal>Just off the A41 between Bicester and Oxford.</p>
+    </div>
+    <div class="visit__grid">
+      <div class="visit__map" data-reveal>
+        <iframe
+          title="Map showing The Red Cow, Chesterton"
+          src="https://maps.google.com/maps?q=The%20Red%20Cow%2C%20The%20Green%2C%20Chesterton%20OX26%201UU&t=&z=16&ie=UTF8&iwloc=&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+      <div class="visit__info" data-reveal>
+        <div class="visit__card">
+          <h3>Address</h3>
+          <p>
+            The Red Cow<br/>
+            The Green<br/>
+            Chesterton<br/>
+            Oxfordshire <strong>OX26 1UU</strong>
+          </p>
+          <a class="link" href="https://www.google.com/maps/dir/?api=1&destination=The+Red+Cow,+The+Green,+Chesterton+OX26+1UU" target="_blank" rel="noopener">
+            Get directions →
+          </a>
+        </div>
+        <div class="visit__card">
+          <h3>Opening Hours</h3>
+          <table class="hours">
+            <tbody>
+              <tr><th>Monday</th><td>Closed</td></tr>
+              <tr><th>Tuesday</th><td>6pm – 10pm <span>drinks only</span></td></tr>
+              <tr><th>Wednesday</th><td>12 – 3, 6 – 10 <span>food 12 – 2, 6 – 8.30</span></td></tr>
+              <tr><th>Thursday</th><td>12 – 3, 6 – 10 <span>food 12 – 2, 6 – 8.30</span></td></tr>
+              <tr><th>Friday</th><td>12 – 3, 5 – 11 <span>food 12 – 2, 5 – 8.30</span></td></tr>
+              <tr><th>Saturday</th><td>12 – 11 <span>food 12 – 8.30</span></td></tr>
+              <tr><th>Sunday</th><td>12 – 10 <span>food 12 – 4</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="visit__card">
+          <h3>Reach Us</h3>
+          <p>
+            <a href="tel:+441869932495" class="link link--big">01869 932495</a><br/>
+            <a href="mailto:chestertonredcow@gmail.com" class="link">chestertonredcow@gmail.com</a>
+          </p>
+          <div class="visit__socials">
+            <a href="#" aria-label="Instagram" class="visit__social">Instagram</a>
+            <a href="#" aria-label="Facebook" class="visit__social">Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================== CONTACT ================== -->
+  <section class="contact" id="contact">
+    <div class="contact__inner">
+      <p class="eyebrow eyebrow--light" data-reveal>Get in Touch</p>
+      <h2 class="h2 h2--light" data-reveal>Book a table or<br/>drop us a line.</h2>
+      <p class="contact__sub" data-reveal>
+        For bookings, private hire, or just to say hello. Call us on
+        <a href="tel:+441869932495">01869 932495</a> or fill in the form below.
+      </p>
+
+      <form class="contact__form" data-reveal onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent. We will be in touch'; this.reset();">
+        <div class="field">
+          <label for="firstName">First name</label>
+          <input id="firstName" name="firstName" type="text" required />
+        </div>
+        <div class="field">
+          <label for="lastName">Last name</label>
+          <input id="lastName" name="lastName" type="text" />
+        </div>
+        <div class="field field--full">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="field field--full">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ================== FOOTER ================== -->
+  <footer class="foot">
+    <div class="foot__top">
+      <div class="foot__brand">
+        <span class="foot__mark">RC</span>
+        <div>
+          <p class="foot__name">The Red Cow</p>
+          <p class="foot__tag">Traditional British Village Pub · Est. centuries ago</p>
+        </div>
+      </div>
+      <div class="foot__cols">
+        <div>
+          <p class="foot__h">Find Us</p>
+          <p>The Green, Chesterton<br/>Oxfordshire OX26 1UU</p>
+        </div>
+        <div>
+          <p class="foot__h">Reach Us</p>
+          <p>
+            <a href="tel:+441869932495">01869 932495</a><br/>
+            <a href="mailto:chestertonredcow@gmail.com">chestertonredcow@gmail.com</a>
+          </p>
+        </div>
+        <div>
+          <p class="foot__h">Follow</p>
+          <p>
+            <a href="#">Instagram</a><br/>
+            <a href="#">Facebook</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="foot__bottom">
+      <p>© <span id="year"></span> The Red Cow, Chesterton. All rights reserved.</p>
+      <p>Designed with care.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
