@@ -475,6 +475,9 @@ section { position: relative; }
   display: block;
   border-bottom: 1px solid var(--c-line);
 }
+.events__img--flip {
+  transform: rotate(180deg);
+}
 .events__text a {
   color: var(--c-cognac);
   border-bottom: 1px solid rgba(182, 114, 45, 0.45);
