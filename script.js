@@ -11,8 +11,7 @@
     instagramEmbedSrc: '',
   };
 
-  /* Drop pub-video.mp4 into assets/img/ then set filename here */
-  const PUB_VIDEO = 'assets/img/pub-video.mp4';
+  const PUB_VIDEO = 'assets/img/pub-video.mov';
 
   if (SOCIAL.instagramHandle || SOCIAL.instagramEmbedSrc) {
     const follow = document.getElementById('instagramFollow');
@@ -164,6 +163,7 @@
       .then((res) => {
         if (!res.ok) return;
         videoSrc.src = PUB_VIDEO;
+        videoSrc.type = PUB_VIDEO.endsWith('.mov') ? 'video/quicktime' : 'video/mp4';
         videoWrap.hidden = false;
       })
       .catch(() => {});

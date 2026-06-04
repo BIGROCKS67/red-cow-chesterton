@@ -96,7 +96,7 @@ Configured in `script.js` → `SOCIAL` object:
 | `extra.jpg` | Spare |
 | `gallery/pub-01.jpg` … `pub-08.jpg` | Gallery carousel |
 | `gallery/burger-night.jpg` | Burger night card |
-| `pub-video.mp4` | Optional walkthrough video (set `PUB_VIDEO` in `script.js`) |
+| `pub-video.mov` | Walkthrough video under gallery (`PUB_VIDEO` in `script.js`) |
 
 **Dropbox photos:** https://www.dropbox.com/scl/fo/hbrq2dq8rn9tlwnsbv5gx/ADMq3v4YsV_za7zGw5ryZi8?rlkey=9xk7gxagkjt7rrn7kushgdake — Dropbox stars are not visible without login; ask Anthony for starred filenames to swap into `gallery/`.
 
@@ -128,7 +128,7 @@ GitHub Pages auto-deploys from `main`. SSL enforced.
 ## Pending / TODO
 
 - [ ] Wire contact form (Formspree or similar)
-- [ ] Add `assets/img/pub-video.mp4` when Anthony shares the video file (or exact filename in Dropbox)
+- [x] Pub walkthrough video (`pub-video.mov` from Dropbox)
 - [ ] Swap gallery images if Anthony sends starred filenames
 - [ ] Instagram live feed embed when SnapWidget/Behold URL ready
 - [ ] Facebook Meta embed when page is fully public
