@@ -53,6 +53,7 @@
     </a>
     <nav class="nav__links" aria-label="Primary">
       <a href="#about">Our Story</a>
+      <a href="#gallery">Gallery</a>
       <a href="#events">What's On</a>
       <a href="#menu">Menu</a>
       <a href="#bar">The Bar</a>
@@ -150,6 +151,39 @@
     </div>
   </section>
 
+  <!-- ================== GALLERY ================== -->
+  <section class="gallery" id="gallery">
+    <div class="gallery__head">
+      <p class="eyebrow" data-reveal>The Pub Today</p>
+      <h2 class="h2" data-reveal>Inside &amp; out.</h2>
+      <p class="gallery__intro" data-reveal>Fresh photos of The Red Cow as it is now. Exterior, bar and dining spaces.</p>
+    </div>
+    <div class="gallery__carousel" data-reveal id="galleryCarousel">
+      <button type="button" class="gallery__nav gallery__nav--prev" aria-label="Previous photo">‹</button>
+      <div class="gallery__viewport">
+        <div class="gallery__track" id="galleryTrack">
+          <figure class="gallery__slide is-active"><img src="assets/img/gallery/pub-01.jpg" alt="The Red Cow pub exterior" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-02.jpg" alt="The Red Cow from the outside" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-03.jpg" alt="Inside The Red Cow" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-04.jpg" alt="The bar and dining area at The Red Cow" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-05.jpg" alt="The Red Cow interior" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-06.jpg" alt="Dining space at The Red Cow" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-07.jpg" alt="The Red Cow pub" loading="lazy" /></figure>
+          <figure class="gallery__slide"><img src="assets/img/gallery/pub-08.jpg" alt="The Red Cow, Chesterton" loading="lazy" /></figure>
+        </div>
+      </div>
+      <button type="button" class="gallery__nav gallery__nav--next" aria-label="Next photo">›</button>
+      <div class="gallery__dots" id="galleryDots" aria-hidden="true"></div>
+    </div>
+    <div class="gallery__video" id="pubVideoWrap" data-reveal hidden>
+      <h3 class="gallery__video-title">A look around the pub</h3>
+      <video class="gallery__video-player" id="pubVideo" controls playsinline preload="metadata" poster="assets/img/gallery/pub-03.jpg">
+        <source src="" type="video/mp4" id="pubVideoSource" />
+        Your browser does not support video playback.
+      </video>
+    </div>
+  </section>
+
   <!-- ================== WHAT'S ON ================== -->
   <section class="events" id="events">
     <div class="events__head">
@@ -165,6 +199,7 @@
         <p class="events__text">Drop in for tea or coffee with individual cafetières and teapots on the table. Help yourself to sugar, milk, cake and biscuits. Coffee and tea £3.50 (regular or decaf). Cake and biscuits free. Usually finished by 1.30pm.</p>
       </article>
       <article class="events__card events__card--accent" data-reveal>
+        <img class="events__img" src="assets/img/gallery/burger-night.jpg" alt="Burger night at The Red Cow" loading="lazy" />
         <p class="events__day">Every Thursday</p>
         <h3 class="events__title">Burger Night</h3>
         <p class="events__text">Our full burger menu, skin-on fries included. See the Burger Night tab on our menu for the full line-up.</p>

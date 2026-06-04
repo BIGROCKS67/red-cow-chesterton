@@ -11,6 +11,9 @@
     instagramEmbedSrc: '',
   };
 
+  /* Drop pub-video.mp4 into assets/img/ then set filename here */
+  const PUB_VIDEO = 'assets/img/pub-video.mp4';
+
   if (SOCIAL.instagramHandle || SOCIAL.instagramEmbedSrc) {
     const follow = document.getElementById('instagramFollow');
     const embed = document.getElementById('instagramEmbed');
@@ -106,6 +109,65 @@
       document.getElementById('menu')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
   });
+
+  /* --- gallery carousel --- */
+  const galleryTrack = document.getElementById('galleryTrack');
+  const galleryDots  = document.getElementById('galleryDots');
+  if (galleryTrack) {
+    const slides = Array.from(galleryTrack.querySelectorAll('.gallery__slide'));
+    let index = 0;
+    let timer;
+
+    const goTo = (i) => {
+      index = (i + slides.length) % slides.length;
+      galleryTrack.style.transform = `translateX(-${index * 100}%)`;
+      slides.forEach((s, n) => s.classList.toggle('is-active', n === index));
+      galleryDots?.querySelectorAll('.gallery__dot').forEach((d, n) => {
+        d.classList.toggle('is-active', n === index);
+        d.setAttribute('aria-current', n === index ? 'true' : 'false');
+      });
+    };
+
+    if (galleryDots) {
+      slides.forEach((_, n) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'gallery__dot' + (n === 0 ? ' is-active' : '');
+        dot.setAttribute('aria-label', `Photo ${n + 1}`);
+        dot.addEventListener('click', () => { goTo(n); resetTimer(); });
+        galleryDots.appendChild(dot);
+      });
+      galleryDots.removeAttribute('aria-hidden');
+    }
+
+    document.querySelector('.gallery__nav--prev')?.addEventListener('click', () => {
+      goTo(index - 1);
+      resetTimer();
+    });
+    document.querySelector('.gallery__nav--next')?.addEventListener('click', () => {
+      goTo(index + 1);
+      resetTimer();
+    });
+
+    const resetTimer = () => {
+      clearInterval(timer);
+      timer = setInterval(() => goTo(index + 1), 6000);
+    };
+    resetTimer();
+  }
+
+  /* --- pub video (shows when file exists) --- */
+  const videoWrap = document.getElementById('pubVideoWrap');
+  const videoSrc  = document.getElementById('pubVideoSource');
+  if (PUB_VIDEO && videoWrap && videoSrc) {
+    fetch(PUB_VIDEO, { method: 'HEAD' })
+      .then((res) => {
+        if (!res.ok) return;
+        videoSrc.src = PUB_VIDEO;
+        videoWrap.hidden = false;
+      })
+      .catch(() => {});
+  }
 
   /* --- reveal on scroll --- */
   const reveals = document.querySelectorAll('[data-reveal]');
