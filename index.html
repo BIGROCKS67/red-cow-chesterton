@@ -507,24 +507,41 @@
         <a href="tel:+441869932495">01869 932495</a> or fill in the form below.
       </p>
 
-      <form class="contact__form" data-reveal onsubmit="event.preventDefault(); this.querySelector('button').textContent='Sent. We will be in touch'; this.reset();">
+      <form class="contact__form" id="contactForm" data-reveal action="https://formsubmit.co/chestertonredcow@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="New enquiry from theredcowchesterton.co.uk" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
         <div class="field">
           <label for="firstName">First name</label>
-          <input id="firstName" name="firstName" type="text" required />
+          <input id="firstName" name="First name" type="text" required />
         </div>
         <div class="field">
           <label for="lastName">Last name</label>
-          <input id="lastName" name="lastName" type="text" />
+          <input id="lastName" name="Last name" type="text" />
         </div>
-        <div class="field field--full">
+        <div class="field">
           <label for="email">Email</label>
           <input id="email" name="email" type="email" required />
         </div>
+        <div class="field">
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="Phone" type="tel" />
+        </div>
+        <div class="field">
+          <label for="bookingDate">Date (if booking)</label>
+          <input id="bookingDate" name="Date" type="date" />
+        </div>
+        <div class="field">
+          <label for="partySize">Party size (if booking)</label>
+          <input id="partySize" name="Party size" type="number" min="1" max="40" />
+        </div>
         <div class="field field--full">
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" required></textarea>
+          <textarea id="message" name="Message" rows="5" required placeholder="e.g. Table for 4 on Friday around 7pm, or any other enquiry"></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        <p class="contact__form-note" id="contactFormNote" hidden></p>
       </form>
     </div>
   </section>

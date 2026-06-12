@@ -1141,6 +1141,7 @@ section { position: relative; }
   font-size: 1rem;
   transition: border-color .25s var(--ease), background .25s var(--ease);
   resize: vertical;
+  color-scheme: dark;
 }
 .field input:focus, .field textarea:focus {
   outline: none;
@@ -1148,6 +1149,14 @@ section { position: relative; }
   background: rgba(0,0,0,0.28);
 }
 .contact__form .btn { grid-column: 1 / -1; margin-top: 0.5rem; }
+.contact__form-note {
+  grid-column: 1 / -1;
+  margin: 0.25rem 0 0;
+  font-size: 0.92rem;
+  color: rgba(251, 247, 238, 0.8);
+  text-align: center;
+}
+.contact__form-note a { color: var(--c-cognac-2); }
 
 @media (max-width: 600px) {
   .contact__form { grid-template-columns: 1fr; }

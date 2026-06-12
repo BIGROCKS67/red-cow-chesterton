@@ -155,6 +155,41 @@
     resetTimer();
   }
 
+  /* --- contact form (FormSubmit -> pub inbox) --- */
+  const contactForm = document.getElementById('contactForm');
+  const contactNote = document.getElementById('contactFormNote');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch('https://formsubmit.co/ajax/chestertonredcow@gmail.com', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('send failed');
+          contactForm.reset();
+          btn.textContent = 'Sent. We will be in touch';
+          if (contactNote) {
+            contactNote.hidden = false;
+            contactNote.textContent = 'Thanks — your message is on its way to the pub. For same-day bookings please call 01869 932495.';
+          }
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Send Message';
+          if (contactNote) {
+            contactNote.hidden = false;
+            contactNote.textContent = 'Sorry, something went wrong sending that. Please call us on 01869 932495 or email chestertonredcow@gmail.com.';
+          }
+        });
+    });
+  }
+
   /* --- reveal on scroll --- */
   const reveals = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window) {
