@@ -192,7 +192,7 @@
       </article>
       <article class="events__card events__card--accent" data-reveal>
         <img class="events__img" src="assets/img/gallery/burger-night.jpg" alt="Burgers and skin-on fries at The Red Cow burger night" loading="lazy" />
-        <p class="events__day">Every Thursday</p>
+        <p class="events__day">Every Thursday · 6–8.30pm</p>
         <h3 class="events__title">Burger Night</h3>
         <p class="events__text">Our full burger menu, skin-on fries included. See the Burger Night tab on our menu for the full line-up.</p>
         <a href="#menu" class="events__link" data-tab-jump="burgers">View burgers →</a>
@@ -223,6 +223,7 @@
       <div class="menu__tabs" role="tablist" data-reveal>
         <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="dinner">Dinner</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="burgers">Burger Night</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="paninis">Paninis</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="sunday">Sunday</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="kids">Children</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="dessert">Dessert &amp; Drinks</button>
@@ -269,28 +270,56 @@
     <!-- BURGER NIGHT -->
     <div class="menu__panel" data-panel="burgers">
       <p class="menu__desc menu__desc--feature menu__desc--center">
-        <strong>Every Thursday is Burger Night.</strong> All burgers served with skin-on fries.
+        <strong>Every Thursday, 6–8.30pm.</strong> All burgers served with skin-on fries.
+        Free drink with each burger when you eat in*
+        <span class="menu__desc-note">*£2 surcharge for Peroni, Prior Life pints &amp; medium wines</span>.
+        £13 takeaway available on all burgers.
       </p>
       <div class="menu__cols">
         <div class="menu__col">
           <h3 class="menu__cat">Burgers</h3>
           <ul class="menu__list">
-            <li><div class="menu__row"><span class="menu__name">Smokey Pub Burger</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Beef patty, smoked bacon, BBQ sauce &amp; applewood cheese <em>(gfo, dfo)</em></p></li>
-            <li><div class="menu__row"><span class="menu__name">Spring Chicken</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, halloumi, lettuce, tomato, avocado &amp; mayonnaise <em>(gfo, dfo)</em></p></li>
-            <li><div class="menu__row"><span class="menu__name">Meat Your Maker</span><span class="menu__dot"></span><span class="menu__price">£20</span></div><p class="menu__desc">Two beef patties, bacon, chipolatas, melted cheddar, pickles &amp; burger relish <em>(gfo, dfo)</em></p></li>
-            <li><div class="menu__row"><span class="menu__name">Falafel It All</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Falafel, lettuce, tomato, spicy slaw &amp; sriracha sauce <em>(df, gfo, v)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Dirty Burger</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, mac &amp; cheese, bacon &amp; BBQ sauce <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Good Ol' USA</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, smoked bacon, pickles, mustard, BBQ sauce &amp; melted applewood cheese <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Classic Beef</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Beef patty, melted cheddar, lettuce, tomato &amp; tomato relish <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">The Furnace</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, Mexicana cheese, jalapeños, lettuce, tomato &amp; sriracha sauce <em>(dfo, gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Classic Chicken</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Chicken breast, melted cheddar, lettuce, tomato &amp; mayonnaise <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Upping the Steaks</span><span class="menu__dot"></span><span class="menu__price">£18</span></div><p class="menu__desc">Rump steak, lettuce, tomato, red onion &amp; mustard mayonnaise <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mushroom Halloumi</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Portabello mushroom, grilled halloumi, chilli jam, lettuce &amp; tomato <em>(v, vgo, gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Bluey</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, melted blue cheese, sautéed mushrooms, mayonnaise, lettuce &amp; tomato <em>(gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Spring Chicken</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, grilled halloumi, avocado, lettuce, tomato &amp; mayonnaise <em>(gfo, dfo)</em></p></li>
           </ul>
         </div>
+        <div class="menu__col menu__col--continued">
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Red Cow Special</span><span class="menu__dot"></span><span class="menu__price">£19</span></div><p class="menu__desc">Beef patty, melted cheddar, chipolatas, fried egg, ketchup, bacon, lettuce, tomato &amp; onion rings <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Smokey Pub</span><span class="menu__dot"></span><span class="menu__price">£15</span></div><p class="menu__desc">Beef patty, smoked bacon, applewood cheese &amp; BBQ sauce <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">The Yodeller</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Beef patty, portabello mushroom, onion jam, burger sauce, tomato, lettuce &amp; emmental cheese <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Beaky Blinder</span><span class="menu__dot"></span><span class="menu__price">£16</span></div><p class="menu__desc">Chicken breast, halloumi, chorizo, lettuce, tomato &amp; mayonnaise <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Falafel It All</span><span class="menu__dot"></span><span class="menu__price">£14</span></div><p class="menu__desc">Falafel, lettuce, tomato, spicy slaw &amp; sriracha sauce <em>(v, gfo, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">The Hangover</span><span class="menu__dot"></span><span class="menu__price">£18</span></div><p class="menu__desc">Beef patty, chipolatas, bacon, fried egg, hashbrown &amp; ketchup <em>(df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Cod of Duty</span><span class="menu__dot"></span><span class="menu__price">£17</span></div><p class="menu__desc">Beer battered cod, mushy peas &amp; tartar <em>(gfo, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Meat Your Maker</span><span class="menu__dot"></span><span class="menu__price">£20</span></div><p class="menu__desc">Two beef patties, bacon, chipolatas, melted cheddar, pickles &amp; burger relish <em>(gfo, dfo)</em></p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- PANINIS -->
+    <div class="menu__panel" data-panel="paninis">
+      <p class="menu__desc menu__desc--feature menu__desc--center">
+        <strong>Lunch served 12–2pm, Wednesday to Friday.</strong>
+        All paninis served with skin-on fries and side salad.
+      </p>
+      <div class="menu__cols menu__cols--single">
         <div class="menu__col">
-          <h3 class="menu__cat">Sides</h3>
-          <ul class="menu__sides">
-            <li>Chunky chips <em>(gf)</em> £4.50</li>
-            <li>Side salad <em>(gf)</em> £4.50</li>
-            <li>Onion rings <em>(gf)</em> £4.50</li>
-            <li>Mac 'n' cheese <em>(v)</em> £5</li>
-            <li>Garlic bread <em>(v)</em> £4.50</li>
-            <li>Skin-on fries <em>(gf)</em> £4.50</li>
-            <li>Battered halloumi <em>(gf)</em> £6</li>
+          <h3 class="menu__cat">Paninis</h3>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Chipolatas &amp; Sautéed Onions</span><span class="menu__dot"></span><span class="menu__price">£10</span></div><p class="menu__desc"><em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Brie &amp; Bacon</span><span class="menu__dot"></span><span class="menu__price">£10</span></div><p class="menu__desc">Cranberry sauce <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Philly Steak</span><span class="menu__dot"></span><span class="menu__price">£13</span></div><p class="menu__desc">Rump steak, peppers &amp; mustard <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken</span><span class="menu__dot"></span><span class="menu__price">£11</span></div><p class="menu__desc">Sundried tomatoes, pesto &amp; mozzarella <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Vegetarian</span><span class="menu__dot"></span><span class="menu__price">£9</span></div><p class="menu__desc">Spinach, tomato, avocado, cheddar &amp; chilli flakes <em>(v, vgo, gf)</em></p></li>
           </ul>
         </div>
       </div>

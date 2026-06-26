@@ -782,6 +782,21 @@ section { position: relative; }
   border-left: 2px solid var(--c-cognac);
   background: rgba(0,0,0,0.15);
 }
+.menu__desc-note {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.88rem;
+  font-style: normal;
+  color: rgba(251, 247, 238, 0.55);
+}
+.menu__cols--single {
+  grid-template-columns: minmax(0, 640px);
+  justify-content: center;
+}
+.menu__col--continued { padding-top: 2.85rem; }
+@media (max-width: 880px) {
+  .menu__col--continued { padding-top: 0; }
+}
 .menu__desc em { font-style: italic; color: rgba(251,247,238,.5); }
 .menu__add { color: var(--c-cognac-2); font-style: italic; }
 
