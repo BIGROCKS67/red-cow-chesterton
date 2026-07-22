@@ -40,8 +40,7 @@ Standalone static village pub website. Replaced the old Wix site. No backend, no
 | What's On | `#events` | Coffee afternoon, burger night, quiz night |
 | Menu | `#menu` | Tabbed: Dinner · Burger Night · Sunday · Children · Dessert & Drinks |
 | The Bar | `#bar` | Real ales, wine, spirits |
-| Visit | `#visit` | Google Maps embed, opening hours, social links |
-| Contact | `#contact` | Form stub (not wired to backend yet) |
+| Visit | `#visit` | Google Maps embed, opening hours, phone & email |
 | Social | `#social` | Facebook + Instagram cards |
 | Footer | — | Logo, address, links |
 
@@ -127,7 +126,7 @@ GitHub Pages auto-deploys from `main`. SSL enforced.
 
 ## Pending / TODO
 
-- [ ] Wire contact form (Formspree or similar)
+- [ ] Re-add contact/booking form when pub wants it
 - [x] Pub walkthrough video (`pub-video.mov` from Dropbox)
 - [ ] Swap gallery images if Anthony sends starred filenames
 - [ ] Instagram live feed embed when SnapWidget/Behold URL ready
