@@ -176,7 +176,7 @@
           btn.textContent = 'Sent. We will be in touch';
           if (contactNote) {
             contactNote.hidden = false;
-            contactNote.textContent = 'Thanks — your message is on its way to the pub. For same-day bookings please call 01869 932495.';
+            contactNote.textContent = 'Thanks — your message is on its way to the pub. To book a table, please call 01869 932495.';
           }
         })
         .catch(() => {

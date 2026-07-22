@@ -530,14 +530,18 @@
   <section class="contact" id="contact">
     <div class="contact__inner">
       <p class="eyebrow eyebrow--light" data-reveal>Get in Touch</p>
-      <h2 class="h2 h2--light" data-reveal>Book a table or<br/>drop us a line.</h2>
+      <h2 class="h2 h2--light" data-reveal>Drop us a line.</h2>
+      <p class="contact__notice" data-reveal>
+        <strong>Table bookings by phone only.</strong>
+        Call <a href="tel:+441869932495">01869 932495</a> to reserve.
+        Online table booking is paused for now.
+      </p>
       <p class="contact__sub" data-reveal>
-        For bookings, private hire, or just to say hello. Call us on
-        <a href="tel:+441869932495">01869 932495</a> or fill in the form below.
+        Use the form below for general enquiries and private hire, or just to say hello.
       </p>
 
       <form class="contact__form" id="contactForm" data-reveal action="https://formsubmit.co/chestertonredcow@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="New enquiry from theredcowchesterton.co.uk" />
+        <input type="hidden" name="_subject" value="General enquiry from theredcowchesterton.co.uk" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
@@ -557,17 +561,9 @@
           <label for="phone">Phone (optional)</label>
           <input id="phone" name="Phone" type="tel" />
         </div>
-        <div class="field">
-          <label for="bookingDate">Date (if booking)</label>
-          <input id="bookingDate" name="Date" type="date" />
-        </div>
-        <div class="field">
-          <label for="partySize">Party size (if booking)</label>
-          <input id="partySize" name="Party size" type="number" min="1" max="40" />
-        </div>
         <div class="field field--full">
           <label for="message">Message</label>
-          <textarea id="message" name="Message" rows="5" required placeholder="e.g. Table for 4 on Friday around 7pm, or any other enquiry"></textarea>
+          <textarea id="message" name="Message" rows="5" required placeholder="Private hire, general questions, feedback…"></textarea>
         </div>
         <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         <p class="contact__form-note" id="contactFormNote" hidden></p>

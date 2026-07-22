@@ -1130,6 +1130,21 @@ section { position: relative; }
   margin: 0 0 2.5rem;
 }
 .contact__sub a { color: var(--c-cognac-2); border-bottom: 1px solid var(--c-cognac-2); }
+.contact__notice {
+  max-width: 42ch;
+  margin: 0 auto 1rem;
+  padding: 0.85rem 1rem;
+  border: 1px solid rgba(212, 148, 87, 0.35);
+  border-radius: var(--radius);
+  background: rgba(182, 114, 45, 0.12);
+  font-size: 0.95rem;
+  color: rgba(251, 247, 238, 0.9);
+  line-height: 1.5;
+}
+.contact__notice a {
+  color: var(--c-cognac-2);
+  border-bottom: 1px solid rgba(212, 148, 87, 0.5);
+}
 
 .contact__form {
   display: grid;
