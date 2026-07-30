@@ -532,8 +532,8 @@
       <p class="eyebrow eyebrow--light" data-reveal>Get in Touch</p>
       <h2 class="h2 h2--light" data-reveal>Book a table or<br/>drop us a line.</h2>
       <p class="contact__sub" data-reveal>
-        Book Fri–Sun online below. Mon–Thu, private hire, or same-day tables — call
-        <a href="tel:+441869932495">01869 932495</a>.
+        For bookings, private hire, or just to say hello. Call us on
+        <a href="tel:+441869932495">01869 932495</a> or fill in the form below.
       </p>
 
       <form class="contact__form" id="contactForm" data-reveal action="https://formsubmit.co/chestertonredcow@gmail.com" method="POST">
@@ -554,22 +554,22 @@
           <input id="email" name="email" type="email" required />
         </div>
         <div class="field">
-          <label for="phone">Phone</label>
-          <input id="phone" name="Phone" type="tel" required />
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="Phone" type="tel" />
         </div>
         <div class="field">
-          <label for="bookingDate">Date</label>
-          <input id="bookingDate" name="Date" type="date" required />
+          <label for="bookingDate">Date (if booking)</label>
+          <input id="bookingDate" name="Date" type="date" />
         </div>
         <div class="field">
-          <label for="partySize">Party size</label>
-          <input id="partySize" name="Party size" type="number" min="1" max="40" required />
+          <label for="partySize">Party size (if booking)</label>
+          <input id="partySize" name="Party size" type="number" min="1" max="40" />
         </div>
         <div class="field field--full">
-          <label for="message">Notes (optional)</label>
-          <textarea id="message" name="Message" rows="4" placeholder="Any special requests, high chair, etc."></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="Message" rows="5" required placeholder="e.g. Table for 4 on Friday around 7pm, or any other enquiry"></textarea>
         </div>
-        <button type="submit" class="btn btn--primary btn--full">Send Booking Request</button>
+        <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         <p class="contact__form-note" id="contactFormNote" hidden></p>
       </form>
     </div>

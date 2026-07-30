@@ -156,12 +156,8 @@
   }
 
   /* --- booking form (FormSubmit -> pub inbox) --- */
-  const BOOKING = {
-    // First day online booking accepts requests (YYYY-MM-DD)
-    liveFrom: '2026-07-31',
-    // Fri=5, Sat=6, Sun=0 only via the form
-    bookableDays: [0, 5, 6],
-  };
+  // Online booking back to normal from this date (YYYY-MM-DD)
+  const BOOKING_LIVE_FROM = '2026-07-31';
 
   const contactForm = document.getElementById('contactForm');
   const contactNote = document.getElementById('contactFormNote');
@@ -170,42 +166,20 @@
   const pad = (n) => String(n).padStart(2, '0');
   const toInputDate = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
-  const isBookableDay = (d) => BOOKING.bookableDays.includes(d.getDay());
-
-  const nextBookableDate = (from) => {
-    const d = new Date(from);
-    d.setHours(0, 0, 0, 0);
-    const live = new Date(`${BOOKING.liveFrom}T00:00:00`);
-    if (d < live) d.setTime(live.getTime());
-    while (!isBookableDay(d)) d.setDate(d.getDate() + 1);
-    return d;
+  const bookingMinDate = () => {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const live = new Date(`${BOOKING_LIVE_FROM}T00:00:00`);
+    return today < live ? live : today;
   };
 
   if (bookingDate) {
-    const min = nextBookableDate(new Date());
-    bookingDate.min = toInputDate(min);
-    bookingDate.addEventListener('change', () => {
-      if (!bookingDate.value) return;
-      const picked = new Date(`${bookingDate.value}T00:00:00`);
-      if (!isBookableDay(picked)) {
-        bookingDate.setCustomValidity('Online booking is for Friday to Sunday only. Call us for other days.');
-      } else if (picked < min) {
-        bookingDate.setCustomValidity(`Online booking is from ${BOOKING.liveFrom} onwards.`);
-      } else {
-        bookingDate.setCustomValidity('');
-      }
-    });
+    bookingDate.min = toInputDate(bookingMinDate());
   }
 
   if (contactForm) {
     contactForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (bookingDate) bookingDate.dispatchEvent(new Event('change'));
-      if (!contactForm.checkValidity()) {
-        contactForm.reportValidity();
-        return;
-      }
-
       const btn = contactForm.querySelector('button[type="submit"]');
       btn.disabled = true;
       btn.textContent = 'Sending…';
@@ -219,16 +193,16 @@
           if (!res.ok) throw new Error('send failed');
           contactForm.reset();
           btn.disabled = false;
-          btn.textContent = 'Send Booking Request';
-          if (bookingDate) bookingDate.min = toInputDate(nextBookableDate(new Date()));
+          btn.textContent = 'Send Message';
+          if (bookingDate) bookingDate.min = toInputDate(bookingMinDate());
           if (contactNote) {
             contactNote.hidden = false;
-            contactNote.textContent = 'Thanks — your request is on its way. The pub will confirm by email or phone.';
+            contactNote.textContent = 'Thanks — your message is on its way to the pub. For same-day bookings please call 01869 932495.';
           }
         })
         .catch(() => {
           btn.disabled = false;
-          btn.textContent = 'Send Booking Request';
+          btn.textContent = 'Send Message';
           if (contactNote) {
             contactNote.hidden = false;
             contactNote.textContent = 'Sorry, something went wrong. Please call 01869 932495 or email chestertonredcow@gmail.com.';
