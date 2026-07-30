@@ -1111,6 +1111,7 @@ section { position: relative; }
   padding: var(--section-y) var(--gutter);
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 5rem;
 }
 .contact::before {
   content: '';

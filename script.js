@@ -213,17 +213,27 @@
 
   /* --- reveal on scroll --- */
   const reveals = document.querySelectorAll('[data-reveal]');
+
+  const revealIn = (el) => {
+    const siblings = Array.from(el.parentElement?.querySelectorAll(':scope > [data-reveal]') || []);
+    const idx = siblings.indexOf(el);
+    if (idx >= 0) el.style.setProperty('--reveal-delay', (idx * 80) + 'ms');
+    el.classList.add('is-in');
+  };
+
+  const revealHashSection = () => {
+    const id = location.hash.replace('#', '');
+    if (!id) return;
+    const section = document.getElementById(id);
+    section?.querySelectorAll('[data-reveal]').forEach(revealIn);
+  };
+
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          // stagger siblings inside the same parent
-          const siblings = Array.from(el.parentElement?.querySelectorAll(':scope > [data-reveal]') || []);
-          const idx = siblings.indexOf(el);
-          if (idx >= 0) el.style.setProperty('--reveal-delay', (idx * 80) + 'ms');
-          el.classList.add('is-in');
-          io.unobserve(el);
+          revealIn(entry.target);
+          io.unobserve(entry.target);
         }
       });
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
@@ -231,5 +241,8 @@
   } else {
     reveals.forEach(el => el.classList.add('is-in'));
   }
+
+  revealHashSection();
+  window.addEventListener('hashchange', revealHashSection);
 
 })();
