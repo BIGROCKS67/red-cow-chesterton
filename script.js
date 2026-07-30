@@ -155,6 +155,88 @@
     resetTimer();
   }
 
+  /* --- booking form (FormSubmit -> pub inbox) --- */
+  const BOOKING = {
+    // First day online booking accepts requests (YYYY-MM-DD)
+    liveFrom: '2026-07-31',
+    // Fri=5, Sat=6, Sun=0 only via the form
+    bookableDays: [0, 5, 6],
+  };
+
+  const contactForm = document.getElementById('contactForm');
+  const contactNote = document.getElementById('contactFormNote');
+  const bookingDate = document.getElementById('bookingDate');
+
+  const pad = (n) => String(n).padStart(2, '0');
+  const toInputDate = (d) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+
+  const isBookableDay = (d) => BOOKING.bookableDays.includes(d.getDay());
+
+  const nextBookableDate = (from) => {
+    const d = new Date(from);
+    d.setHours(0, 0, 0, 0);
+    const live = new Date(`${BOOKING.liveFrom}T00:00:00`);
+    if (d < live) d.setTime(live.getTime());
+    while (!isBookableDay(d)) d.setDate(d.getDate() + 1);
+    return d;
+  };
+
+  if (bookingDate) {
+    const min = nextBookableDate(new Date());
+    bookingDate.min = toInputDate(min);
+    bookingDate.addEventListener('change', () => {
+      if (!bookingDate.value) return;
+      const picked = new Date(`${bookingDate.value}T00:00:00`);
+      if (!isBookableDay(picked)) {
+        bookingDate.setCustomValidity('Online booking is for Friday to Sunday only. Call us for other days.');
+      } else if (picked < min) {
+        bookingDate.setCustomValidity(`Online booking is from ${BOOKING.liveFrom} onwards.`);
+      } else {
+        bookingDate.setCustomValidity('');
+      }
+    });
+  }
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      if (bookingDate) bookingDate.dispatchEvent(new Event('change'));
+      if (!contactForm.checkValidity()) {
+        contactForm.reportValidity();
+        return;
+      }
+
+      const btn = contactForm.querySelector('button[type="submit"]');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      fetch('https://formsubmit.co/ajax/chestertonredcow@gmail.com', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(contactForm),
+      })
+        .then((res) => {
+          if (!res.ok) throw new Error('send failed');
+          contactForm.reset();
+          btn.disabled = false;
+          btn.textContent = 'Send Booking Request';
+          if (bookingDate) bookingDate.min = toInputDate(nextBookableDate(new Date()));
+          if (contactNote) {
+            contactNote.hidden = false;
+            contactNote.textContent = 'Thanks — your request is on its way. The pub will confirm by email or phone.';
+          }
+        })
+        .catch(() => {
+          btn.disabled = false;
+          btn.textContent = 'Send Booking Request';
+          if (contactNote) {
+            contactNote.hidden = false;
+            contactNote.textContent = 'Sorry, something went wrong. Please call 01869 932495 or email chestertonredcow@gmail.com.';
+          }
+        });
+    });
+  }
+
   /* --- reveal on scroll --- */
   const reveals = document.querySelectorAll('[data-reveal]');
   if ('IntersectionObserver' in window) {
