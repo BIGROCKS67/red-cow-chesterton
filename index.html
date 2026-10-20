@@ -54,6 +54,7 @@
     <nav class="nav__links" aria-label="Primary">
       <a href="#about">Our Story</a>
       <a href="#gallery">Gallery</a>
+      <a href="#christmas">Christmas</a>
       <a href="#events">What's On</a>
       <a href="#menu">Menu</a>
       <a href="#bar">The Bar</a>
@@ -96,20 +97,20 @@
     </div>
     <div class="hero__marquee" aria-hidden="true">
       <div class="hero__marquee-track">
+        <span>Christmas Menu</span><span>·</span>
         <span>Quiz Night</span><span>·</span>
         <span>Burger Night</span><span>·</span>
         <span>Coffee Afternoon</span><span>·</span>
         <span>Sunday Roasts</span><span>·</span>
         <span>Real Ales</span><span>·</span>
         <span>Dog Friendly</span><span>·</span>
-        <span>Beer Garden</span><span>·</span>
+        <span>Christmas Menu</span><span>·</span>
         <span>Quiz Night</span><span>·</span>
         <span>Burger Night</span><span>·</span>
         <span>Coffee Afternoon</span><span>·</span>
         <span>Sunday Roasts</span><span>·</span>
         <span>Real Ales</span><span>·</span>
         <span>Dog Friendly</span><span>·</span>
-        <span>Beer Garden</span><span>·</span>
       </div>
     </div>
   </section>
@@ -179,6 +180,26 @@
     </div>
   </section>
 
+  <!-- ================== CHRISTMAS ================== -->
+  <section class="xmas" id="christmas">
+    <div class="xmas__media" data-reveal>
+      <img src="assets/img/christmas-interior.jpg" alt="The Red Cow dining room decorated for Christmas with garlands, candles and fairy lights" />
+    </div>
+    <div class="xmas__copy">
+      <p class="eyebrow" data-reveal>Festive Season</p>
+      <h2 class="h2" data-reveal>Christmas at<br/><em>The Red Cow.</em></h2>
+      <p class="xmas__dates" data-reveal>Wednesday 2nd – Sunday 20th December</p>
+      <p data-reveal>
+        Two courses £32 · three courses £39. Kids menu also available —
+        two courses £11 · three courses £16. Bookings taken now.
+      </p>
+      <div class="xmas__ctas" data-reveal>
+        <a href="#menu" class="btn btn--primary" data-tab-jump="christmas">View Christmas menus</a>
+        <a href="tel:+441869932495" class="btn btn--ghost-dark">Call to book · 01869 932495</a>
+      </div>
+    </div>
+  </section>
+
   <!-- ================== WHAT'S ON ================== -->
   <section class="events" id="events">
     <div class="events__head">
@@ -187,6 +208,13 @@
       <p class="events__intro" data-reveal>Regular events through the week. Good food, good company. Quiz night is booking essential. Call us for tables.</p>
     </div>
     <div class="events__grid">
+      <article class="events__card events__card--accent" data-reveal>
+        <img class="events__img" src="assets/img/christmas-exterior.jpg" alt="The Red Cow exterior decorated with Christmas lights and garlands" loading="lazy" />
+        <p class="events__day">2 – 20 December</p>
+        <h3 class="events__title">Christmas Menu</h3>
+        <p class="events__text">Festive two or three courses for adults and kids. See the full Christmas menus and book by phone.</p>
+        <a href="#menu" class="events__link" data-tab-jump="christmas">View menus →</a>
+      </article>
       <article class="events__card" data-reveal>
         <img class="events__img events__img--flip" src="assets/img/coffee-afternoon.jpg" alt="Coffee afternoon at The Red Cow with cakes, biscuits and mugs on the table" loading="lazy" />
         <p class="events__day">Every Wednesday · from 12pm</p>
@@ -224,7 +252,8 @@
       </p>
 
       <div class="menu__tabs" role="tablist" data-reveal>
-        <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="dinner">Dinner</button>
+        <button class="menu__tab is-active" role="tab" aria-selected="true" data-tab="christmas">Christmas</button>
+        <button class="menu__tab" role="tab" aria-selected="false" data-tab="dinner">Dinner</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="burgers">Burger Night</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="paninis">Paninis</button>
         <button class="menu__tab" role="tab" aria-selected="false" data-tab="sunday">Sunday</button>
@@ -233,8 +262,74 @@
       </div>
     </div>
 
+    <!-- CHRISTMAS -->
+    <div class="menu__panel is-active" data-panel="christmas">
+      <p class="menu__desc menu__desc--feature menu__desc--center">
+        <strong>Wednesday 2nd – Sunday 20th December.</strong>
+        Adults: two courses £32 · three courses £39.
+        Kids: two courses £11 · three courses £16.
+        Bookings essential — call <a href="tel:+441869932495">01869 932495</a>
+        or email <a href="mailto:chestertonredcow@gmail.com">chestertonredcow@gmail.com</a>.
+      </p>
+      <div class="menu__cols">
+        <div class="menu__col">
+          <h3 class="menu__cat">Christmas Menu</h3>
+          <h4 class="menu__subcat">Starters</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Prawn Cocktail</span></div><p class="menu__desc">Avocado, Marie Rose, leaves &amp; breadcrumbs <em>(gf, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Hare Cassoulet</span></div><p class="menu__desc">Bean stew, bacon &amp; tomatoes <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Pigs in Blankets</span></div><p class="menu__desc">Apple sauce <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Leek &amp; Potato Soup</span></div><p class="menu__desc">Warm bread <em>(v, vgo, gfo)</em></p></li>
+          </ul>
+          <h4 class="menu__subcat">Main dishes</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Roast Beef</span></div><p class="menu__desc">All the trimmings <em>(gfo, dfo)</em>. Nut roast alternative available <em>(v, vg, gfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken Breast</span></div><p class="menu__desc">Carrot purée, potato fondant, asparagus &amp; gravy <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Salmon Risotto</span></div><p class="menu__desc">Peas &amp; crispy shallots <em>(gf, df)</em>. Mushroom option available <em>(gfo, v, vgo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Venison Haunch</span></div><p class="menu__desc">Cauliflower purée, onion bhaji, butternut squash, cavolo nero, pomegranate &amp; a game sauce <em>(gf)</em></p></li>
+          </ul>
+          <h4 class="menu__subcat">Desserts</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Lemon Posset</span></div><p class="menu__desc">Raspberries &amp; shortbread <em>(gf, v)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Black Forest Brownie</span></div><p class="menu__desc">Poached cherries, chocolate sauce &amp; whipped cream <em>(gf, v)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Sorbets</span></div><p class="menu__desc">Lemon, raspberry &amp; coconut <em>(v, vg, gf, df)</em></p></li>
+          </ul>
+        </div>
+        <div class="menu__col">
+          <h3 class="menu__cat">Kids Menu</h3>
+          <h4 class="menu__subcat">Starters</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Pigs in Blankets</span></div><p class="menu__desc">With apple sauce <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Garlic Bread</span></div><p class="menu__desc"><em>(gfo, v)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Tomato Soup</span></div><p class="menu__desc">Warm bread <em>(v, vgo, gfo)</em></p></li>
+          </ul>
+          <h4 class="menu__subcat">Main dishes</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Roast Beef</span></div><p class="menu__desc">All the trimmings <em>(gfo, dfo)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Fish &amp; Chips</span></div><p class="menu__desc">Peas <em>(gf, df)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Chicken Breast</span></div><p class="menu__desc">Chunky chips, carrots &amp; gravy <em>(gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Mac &amp; Cheese</span></div><p class="menu__desc">Vegetable sticks <em>(v)</em></p></li>
+          </ul>
+          <h4 class="menu__subcat">Desserts</h4>
+          <ul class="menu__list">
+            <li><div class="menu__row"><span class="menu__name">Chocolate Brownie</span></div><p class="menu__desc">Vanilla ice cream <em>(gf, v)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Ice Creams</span></div><p class="menu__desc">Vanilla, chocolate or strawberry <em>(v, gf)</em></p></li>
+            <li><div class="menu__row"><span class="menu__name">Sorbets</span></div><p class="menu__desc">Lemon or raspberry <em>(v, vg, gf, df)</em></p></li>
+          </ul>
+          <div class="menu__xmas-flyers">
+            <a href="assets/img/christmas-menu-adult.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/christmas-menu-adult.jpg" alt="The Red Cow Christmas menu flyer" loading="lazy" />
+            </a>
+            <a href="assets/img/christmas-menu-kids.jpg" target="_blank" rel="noopener noreferrer">
+              <img src="assets/img/christmas-menu-kids.jpg" alt="The Red Cow Christmas kids menu flyer" loading="lazy" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- DINNER -->
-    <div class="menu__panel is-active" data-panel="dinner">
+    <div class="menu__panel" data-panel="dinner">
       <div class="menu__cols">
         <div class="menu__col">
           <h3 class="menu__cat">Starters</h3>

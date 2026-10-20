@@ -571,8 +571,11 @@ section { position: relative; }
   max-width: var(--max);
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.25rem;
+}
+@media (min-width: 1100px) {
+  .events__grid { grid-template-columns: repeat(4, 1fr); }
 }
 @media (max-width: 880px) { .events__grid { grid-template-columns: 1fr; } }
 .events__card {
@@ -816,7 +819,100 @@ section { position: relative; }
   .menu__col--continued { padding-top: 0; }
 }
 .menu__desc em { font-style: italic; color: rgba(251,247,238,.5); }
+.menu__desc a {
+  color: var(--c-cognac-2);
+  border-bottom: 1px solid rgba(212, 148, 87, 0.45);
+}
 .menu__add { color: var(--c-cognac-2); font-style: italic; }
+.menu__subcat {
+  margin: 1.5rem 0 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--c-cognac-2);
+  font-weight: 600;
+}
+.menu__subcat:first-of-type { margin-top: 0.35rem; }
+.menu__xmas-flyers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin-top: 2rem;
+}
+.menu__xmas-flyers a {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(251, 247, 238, 0.12);
+  transition: opacity 0.2s;
+}
+.menu__xmas-flyers a:hover { opacity: 0.88; }
+.menu__xmas-flyers img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+/* ============== CHRISTMAS ============== */
+.xmas {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: stretch;
+  background: var(--c-cream);
+  border-top: 1px solid var(--c-line);
+}
+@media (max-width: 880px) {
+  .xmas { grid-template-columns: 1fr; }
+}
+.xmas__media {
+  position: relative;
+  min-height: 52vh;
+  overflow: hidden;
+}
+.xmas__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.xmas__copy {
+  padding: clamp(2.5rem, 6vw, 4.5rem) var(--gutter);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.xmas__dates {
+  margin: 0 0 1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--c-cognac);
+  font-weight: 600;
+}
+.xmas__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+.btn--ghost-dark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.4rem;
+  border: 1px solid var(--c-forest);
+  color: var(--c-forest);
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.25s var(--ease), color 0.25s var(--ease);
+}
+.btn--ghost-dark:hover {
+  background: var(--c-forest);
+  color: var(--c-bone);
+}
 
 .menu__sides {
   display: grid;
