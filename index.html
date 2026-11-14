@@ -620,12 +620,14 @@
     </div>
     <div class="visit__grid">
       <div class="visit__map" data-reveal>
-        <iframe
-          title="Map showing The Red Cow, Chesterton"
-          src="https://maps.google.com/maps?q=The%20Red%20Cow%2C%20The%20Green%2C%20Chesterton%20OX26%201UU&t=&z=16&ie=UTF8&iwloc=&output=embed"
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          allowfullscreen></iframe>
+        <div class="visit__map-gate" id="mapGate">
+          <p class="visit__map-text">The Green, Chesterton, OX26 1UU</p>
+          <button type="button" class="btn btn--primary" id="mapLoad"
+            data-src="https://maps.google.com/maps?q=The%20Red%20Cow%2C%20The%20Green%2C%20Chesterton%20OX26%201UU&t=&z=16&ie=UTF8&iwloc=&output=embed">
+            Show map
+          </button>
+          <p class="visit__map-note">This loads Google Maps, which may set cookies.</p>
+        </div>
       </div>
       <div class="visit__info" data-reveal>
         <div class="visit__card">
@@ -714,6 +716,7 @@
         </div>
         <button type="submit" class="btn btn--primary btn--full">Send Message</button>
         <p class="contact__form-note" id="contactFormNote" hidden></p>
+        <p class="contact__form-privacy">We only use your details to reply to you. See our <a href="privacy.html">privacy notice</a>.</p>
       </form>
     </div>
   </section>
@@ -807,7 +810,7 @@
       </div>
     </div>
     <div class="foot__bottom">
-      <p>© <span id="year"></span> The Red Cow, Chesterton. All rights reserved.</p>
+      <p>© <span id="year"></span> The Red Cow, Chesterton. All rights reserved. <a href="privacy.html">Privacy notice</a></p>
       <p>Website by <a href="https://apcreativeco.co.uk/" target="_blank" rel="noopener">AP Creative Co</a>.</p>
     </div>
   </footer>

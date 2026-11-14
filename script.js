@@ -54,6 +54,20 @@
     });
   }
 
+  /* --- map: only load Google Maps after a click --- */
+  const mapLoad = document.getElementById('mapLoad');
+  const mapGate = document.getElementById('mapGate');
+  if (mapLoad && mapGate) {
+    mapLoad.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.title = 'Map showing The Red Cow, Chesterton';
+      frame.src = mapLoad.dataset.src;
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      frame.allowFullscreen = true;
+      mapGate.replaceWith(frame);
+    });
+  }
+
   /* --- year stamp --- */
   const yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
@@ -61,6 +75,7 @@
   /* --- nav scroll state --- */
   const nav = document.getElementById('nav');
   const onScroll = () => {
+    if (!nav) return;
     if (window.scrollY > 24) nav.classList.add('is-scrolled');
     else nav.classList.remove('is-scrolled');
   };
